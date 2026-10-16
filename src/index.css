@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  /* Brand Palette */
+  --color-cream-canvas: #F4EDE4;
+  --color-cream-surface: #EDE4D8;
+  --color-cream-card: #FAF6F0;
+  --color-cream-light: #FCFAF7;
+  
+  --color-warm-charcoal: #1F1B16;
+  --color-warm-muted: #5C554B;
+  --color-warm-faded: #8C8275;
+  --color-warm-hairline: rgba(31, 27, 22, 0.12);
+  --color-warm-border: #E2D7C9;
+  
+  --color-teal: #2F6F6A;
+  --color-teal-hover: #255A56;
+  --color-teal-light: #4A9A93;
+  --color-teal-subtle: #E6F0EF;
+  
+  --color-olive-dark: #3B4A3A;
+  --color-olive-deep: #2A3629;
+  --color-olive-light: #526651;
+  --color-olive-surface: #323F31;
+  --color-olive-hairline: rgba(244, 237, 228, 0.16);
+
+  /* Typography */
+  --font-display: "Estedad", "Morabba", "Vazirmatn", sans-serif;
+  --font-body: "Vazirmatn", system-ui, -apple-system, sans-serif;
+
+  /* Architectural Radii */
+  --radius-arch-lg: 160px 160px 24px 24px;
+  --radius-arch-full: 9999px 9999px 24px 24px;
+  --radius-editorial-xl: 32px;
+  --radius-editorial-lg: 24px;
+  --radius-editorial-md: 16px;
+  --radius-editorial-sm: 8px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    direction: rtl;
+    font-family: var(--font-body);
+  }
+
+  /* Lenis owns smooth scrolling — avoid fighting native CSS smooth scroll */
+  html.lenis-active {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background-color: var(--color-cream-canvas);
+    color: var(--color-warm-charcoal);
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  /* Editorial Headings */
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom architectural arch classes and utilities */
+.arch-top-full {
+  border-radius: 9999px 9999px 1.5rem 1.5rem;
+}
+
+.arch-top-vault {
+  border-radius: 140px 140px 1.5rem 1.5rem;
+}
+
+.hairline-b {
+  border-bottom: 1px solid var(--color-warm-hairline);
+}
+
+.hairline-t {
+  border-top: 1px solid var(--color-warm-hairline);
+}
+
+.hairline-all {
+  border: 1px solid var(--color-warm-hairline);
+}
+
+.olive-hairline-b {
+  border-bottom: 1px solid var(--color-olive-hairline);
+}
+
+/* Custom Leaflet Map and Price Bubble Marker Styling */
+.price-marker-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-bubble {
+  background-color: var(--color-cream-card);
+  color: var(--color-warm-charcoal);
+  border: 1px solid var(--color-warm-hairline);
+  box-shadow: 0 4px 14px rgba(31, 27, 22, 0.15);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  direction: rtl;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.price-bubble:hover,
+.price-bubble-hovered {
+  background-color: var(--color-teal) !important;
+  color: #ffffff !important;
+  border-color: var(--color-teal) !important;
+  transform: scale(1.15) translateY(-3px);
+  box-shadow: 0 8px 24px rgba(47, 111, 106, 0.4) !important;
+  z-index: 1000 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: var(--color-cream-card) !important;
+  color: var(--color-warm-charcoal) !important;
+  border: 1px solid var(--color-warm-hairline) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 16px 32px rgba(31, 27, 22, 0.15) !important;
+  padding: 0 !important;
+  overflow: hidden;
+  direction: rtl;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: normal !important;
+  font-family: var(--font-body) !important;
+}
+
+.leaflet-container {
+  font-family: var(--font-body) !important;
+  background-color: #EDE4D8 !important;
+  z-index: 10;
+}

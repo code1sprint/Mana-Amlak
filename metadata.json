@@ -1,0 +1,6 @@
+{
+  "name": "املاک مانا | کارگزاری و خانه معماری",
+  "description": "مجله و کارگزاری معماری املاک مانا؛ روایتی اصیل و انسانی از خانه‌ها و ویلاهای معاصر شمیرانات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

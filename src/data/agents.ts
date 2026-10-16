@@ -1,0 +1,67 @@
+import advisorSamanImage from '@/src/assets/images/advisor_portrait_1792169181939.jpg';
+import advisorShahrzadImage from '@/src/assets/images/advisor_female_1792169611664.jpg';
+import advisorKamranImage from '@/src/assets/images/advisor_senior_1792169611876.jpg';
+
+export interface Agent {
+  id: string;
+  name: string;
+  role: string;
+  title: string;
+  experienceYears: number;
+  bio: string;
+  specialty: string[];
+  education: string;
+  phone: string;
+  whatsapp: string;
+  email: string;
+  image: string;
+  propertyIds: string[];
+}
+
+export const AGENTS: Agent[] = [
+  {
+    id: 'saman-radmanesh',
+    name: 'مهندس سامان رادمنش',
+    role: 'مدیر ارشد گزینش معماری',
+    title: 'سرپرست کارگزاری عمارت‌های نیاوران، زعفرانیه و لواسان',
+    experienceYears: 14,
+    bio: 'سامان رادمنش فارغ‌التحصیل دانشکده هنرهای زیبای دانشگاه تهران با بیش از ۱۴ سال فعالیت تخصصی در تحلیل، ارزش‌گذاری و واگذاری املاک آرشیتکتورال شمیرانات است. وی پیش از پیوستن به مانا، در چندین دفتر برجسته معماری به عنوان مدیر طراحی حضور داشته و رویکردی عمیقاً پیوندخورده با اصالت کالبدی و مصالح طبیعی دارد.',
+    specialty: ['عمارت‌های کوهپایه', 'باغ‌ویلاهای لواسانات', 'ارزیابی کیفی سازه و کالبد'],
+    education: 'کارشناسی ارشد معماری، دانشگاه تهران',
+    phone: '۰۲۱-۲۲۰۰۳۳۴۴',
+    whatsapp: '989123456789',
+    email: 'saman@mana-arch.ir',
+    image: advisorSamanImage,
+    propertyIds: ['MANA-101', 'MANA-103', 'MANA-104', 'MANA-107', 'MANA-111', 'MANA-116'],
+  },
+  {
+    id: 'shahrzad-yazdi',
+    name: 'مهندس شهرزاد یزدی',
+    role: 'مشاور ارشد پنت‌هاوس و ابنیه معاصر',
+    title: 'متخصص پنت‌هاوس‌های لوکس فرشته، الهیه و کامرانیه',
+    experienceYears: 11,
+    bio: 'شهرزاد یزدی با سابقه پژوهش در حوزه مسکن معاصر و بازآفرینی مدرن، پل ارتباطی خریداران صاحب‌سلیقه با سازندگان نام‌آشنای منطقه یک است. او معتقد است پنت‌هاوس واقعی باید فراتر از متراژ، پیوندی بی‌نقص با نور طبیعی و چشم‌انداز افق ایجاد کند.',
+    specialty: ['اسکای‌ویلاها و پنت‌هاوس‌ها', 'پلان‌های مدرن و مینیمال', 'تحلیل نورگیری و هوشمندی بنا'],
+    education: 'کارشناسی ارشد طراحی مسکن، دانشگاه پلی‌تکنیک میلان',
+    phone: '۰۲۱-۲۲۰۰۳۳۵۵',
+    whatsapp: '989129876543',
+    email: 'shahrzad@mana-arch.ir',
+    image: advisorShahrzadImage,
+    propertyIds: ['MANA-102', 'MANA-105', 'MANA-108', 'MANA-115', 'MANA-118', 'MANA-124'],
+  },
+  {
+    id: 'dr-kamran-afshar',
+    name: 'دکتر کامران افشار',
+    role: 'مدیر نظارت حقوقی و اسناد بااصالت',
+    title: 'کارشناس رسمی دادگستری و پژوهشگر حقوق املاک و مستغلات',
+    experienceYears: 22,
+    bio: 'دکتر افشار با بیش از دو دهه تجربه حقوقی و کارشناسی در محاکم دادگستری تهران، تضمین‌کننده سلامت مطلق اسناد، استعلامات ثبتی و تاریخچه مالکیتی تمامی پرونده‌های ماناست. هیچ ملکی بدون اخذ تاییدیه سه‌مرحله‌ای از دپارتمان ایشان به کاتالوگ مانا راه نمی‌یابد.',
+    specialty: ['بررسی سوابق ثبتی و شاهنشاهی', 'تنظیم قراردادهای حقوقی اختصاصی', 'ارزیابی رسمی دادگستری'],
+    education: 'دکترای حقوق خصوصی، دانشگاه شهید بهشتی',
+    phone: '۰۲۱-۲۲۰۰۳۳۶۶',
+    whatsapp: '989121112233',
+    email: 'kamran@mana-arch.ir',
+    image: advisorKamranImage,
+    propertyIds: ['MANA-106', 'MANA-109', 'MANA-110', 'MANA-112', 'MANA-117', 'MANA-120'],
+  },
+];
