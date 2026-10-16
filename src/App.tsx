@@ -46,7 +46,7 @@ export default function App() {
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <ToastProvider>
-          <BrowserRouter basename={import.meta.env.BASE_URL}>
+          <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
             <SmoothScrollProvider>
               <Suspense fallback={<LoadingFallback />}>
                 <Routes>
