@@ -100,15 +100,15 @@ export const HomePage: React.FC = () => {
                 <Link
                   key={cat.title}
                   to={cat.href}
-                  className="group flex flex-col bg-cream-card rounded-editorial-xl border border-warm-hairline overflow-hidden hover:border-warm-muted/40 transition-all duration-300 hover:shadow-lg"
+                  className="group flex flex-col bg-cream-card rounded-t-[108px] rounded-b-3xl border border-warm-hairline overflow-hidden hover:border-warm-muted/40 transition-all duration-300 hover:shadow-lg"
                 >
-                  {/* Image with Arch top vault */}
+                  {/* Image with Arch top vault — radius matches outer card */}
                   <div className="relative aspect-[3/4] w-full overflow-hidden bg-cream-surface rounded-t-[100px] p-2">
                     <img
                       src={cat.image}
                       alt={cat.title}
                       referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover rounded-t-[92px] transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover rounded-t-[92px] rounded-b-2xl transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute bottom-4 right-4 px-3 py-1 bg-cream-canvas/90 backdrop-blur-sm rounded-full text-[11px] font-medium text-warm-charcoal border border-warm-hairline">
                       {cat.count}
