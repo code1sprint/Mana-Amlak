@@ -1,0 +1,1 @@
+var e=`/Mana-Amlak/assets/manor_niavaran_1792168520804-BT_iSqgm.jpg`;export{e as t};

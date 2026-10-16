@@ -1,0 +1,1 @@
+var e=`/Mana-Amlak/assets/card_residence_manor_1792167357090-EJbE_qpi.jpg`;export{e as t};

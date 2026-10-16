@@ -1,0 +1,1 @@
+var e=`/Mana-Amlak/assets/advisor_portrait_1792169181939-CrTlSFGN.jpg`;export{e as t};

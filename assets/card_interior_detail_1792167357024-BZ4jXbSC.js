@@ -1,0 +1,1 @@
+var e=`/Mana-Amlak/assets/card_interior_detail_1792167357024-BUnHEwNs.jpg`;export{e as t};
